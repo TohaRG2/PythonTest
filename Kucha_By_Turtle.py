@@ -21,7 +21,7 @@ alex.fd(row_count * 20)
 alex.left(180)
 
 alex.pendown()
-output_count = 0
+output_count = 1
 while output_count < kucha:
     output_in_row = 0
     while output_in_row < row_count and output_in_row < kucha:
