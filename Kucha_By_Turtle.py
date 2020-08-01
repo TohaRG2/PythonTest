@@ -1,7 +1,8 @@
 import turtle
 import random
 
-kucha = random.randint(5, 25)
+# kucha = random.randint(5, 25)
+kucha = 10
 win = turtle.Screen()
 alex = turtle.Turtle()
 alex.speed("fastest")
@@ -21,10 +22,10 @@ alex.fd(row_count * 20)
 alex.left(180)
 
 alex.pendown()
-output_count = 1
+output_count = 0
 while output_count < kucha:
     output_in_row = 0
-    while output_in_row < row_count and output_in_row < kucha:
+    while output_in_row < row_count and output_count < kucha:
         alex.pendown()
         alex.circle(20)
         alex.penup()
