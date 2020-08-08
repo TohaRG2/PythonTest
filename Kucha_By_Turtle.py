@@ -16,6 +16,7 @@ while kucha > max_in_kucha:
 
 alex.write(str(kucha))
 alex.penup()
+alex.fillcolor("green")
 alex.right(90)
 alex.fd(row_count * radius * 2)
 alex.right(90)
@@ -28,7 +29,9 @@ while output_count < kucha:
     output_in_row = 0
     while output_in_row < row_count and output_count < kucha:
         alex.pendown()
+        alex.begin_fill()
         alex.circle(radius)
+        alex.end_fill()
         alex.penup()
         alex.fd(radius * 2)
         output_in_row += 1
