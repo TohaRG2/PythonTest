@@ -1,8 +1,8 @@
 import turtle
 import random
 
-# kucha = random.randint(5, 25)
-kucha = 10
+kucha = random.randint(5, 25)
+#kucha = 10
 radius = 15
 win = turtle.Screen()
 alex = turtle.Turtle()
