@@ -17,3 +17,7 @@ for i in range(len(st)):
         newSt += "0"
 
 print(newSt)
+
+st = st.replace("X", "a")
+st = st.replace(".", "b")
+print(st)
