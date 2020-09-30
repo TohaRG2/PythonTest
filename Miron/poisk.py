@@ -1,4 +1,4 @@
-st = "с: main   second  third   forth    file.py  "
+st = "с: main   second  third   forth    file.py"
 
 count = 0
 
