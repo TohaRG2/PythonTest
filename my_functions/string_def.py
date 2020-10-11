@@ -28,3 +28,12 @@ def substring_before_last(pattern, string):
     if last != -1:
         ret_string = string[: last]
     return ret_string
+
+
+def header_replace(in_string, file_name):
+    phase_name = substring_before_last(".", file_name).upper()
+    class_name = phase_name.capitalize()
+    ret_string = in_string.replace("ClassName", class_name)
+    ret_string = ret_string.replace("PHASE_NAME", phase_name)
+    ret_string = ret_string.replace("phaseName", phase_name.lower())
+    return ret_string
