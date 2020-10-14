@@ -1,13 +1,13 @@
 # primer = input()
-primer = "1+2+3+4"
+primer = "1+2+3+5"
 chislo1 = ""
 chislo2 = ""
 intoger1 = 0
 plus2 = primer.rfind("+")
-poschis = primer[plus2:]
-poschis = int(poschis)
+# poschis = primer[plus2:]
+# poschis = int(poschis)
 otvet = 0
-otvet += poschis
+# otvet += poschis
 plus = primer.find("+")
 while plus != -1:
     chislo1 = primer[:plus]
@@ -16,6 +16,7 @@ while plus != -1:
     intoger1 = int(chislo1)
     otvet += intoger1
     plus = primer.find("+")
+otvet += int(primer)            # и всего-то, чтобы последнее число тоже прибавлялось
 print(otvet)
 
 primer = "1+2+3+4"
