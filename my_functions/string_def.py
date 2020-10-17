@@ -31,9 +31,10 @@ def substring_before_last(pattern, string):
 
 
 def header_replace(in_string, file_name):
-    phase_name = substring_before_last(".", file_name).upper()
-    class_name = phase_name.capitalize()
+    name = substring_before_last(".", file_name)
+    phase_name = name.upper()
+    class_name = name[0].capitalize() + name[1:]
     ret_string = in_string.replace("ClassName", class_name)
     ret_string = ret_string.replace("PHASE_NAME", phase_name)
-    ret_string = ret_string.replace("phaseName", phase_name.lower())
+    ret_string = ret_string.replace("phaseName", name.lower())
     return ret_string

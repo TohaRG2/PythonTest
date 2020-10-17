@@ -7,10 +7,13 @@ from my_functions.string_def import *
 
 
 def my_replace(some_file):
-
-    out_f = open(trg_directory + "/" + some_file, 'w')
+    new_file = some_file.replace(".xml", ".dart")
+    i = new_file.find("_")
+    if i > -1:
+        new_file = new_file[:i] + new_file[i+1:].capitalize()
+    out_f = open(trg_directory + "/" + new_file, 'w')
     # Добавляем хедер
-    out_f.write(header_replace(header, some_file))
+    out_f.write(header_replace(header, new_file))
     with open(directory + "/" + some_file, "r") as in_f:
         in_f.readline()
         in_f.readline()
@@ -51,7 +54,7 @@ out_file = '/Volumes/Data_Mac/TestFL/trg/test.xml'
 log_file = '/Volumes/Data_Mac/TestFL/log.txt'
 recreate_dir(trg_directory)
 header = """
-import 'package:flutter_demo/dataSource/entitys/phases.dart';
+import 'package:rg2_flutter_getx/models/abstracts/phases.dart';
 
 class ClassName implements Phase {
   @override
@@ -78,7 +81,6 @@ class ClassName implements Phase {
 ///==================================================
 
 """
-
 
 lf = open(log_file, 'w')
 files = os.listdir(directory)
