@@ -1,4 +1,4 @@
-st = "с: main   second  third   forth    file.py  "
+st = "    ркенгшщлд неглшо  "
 
 count = 0
 
@@ -12,6 +12,10 @@ while position == 0:
     st = st[1:]
     position = st.find(" ")
 
+st = st.strip()
+
+mas = st.split(" ")
+
 while position != -1:
     count += 1
     st = st[position + 1:]
@@ -22,3 +26,4 @@ while position != -1:
 
 count += 1
 print(count)
+print(len(mas))
