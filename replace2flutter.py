@@ -54,7 +54,7 @@ out_file = '/Volumes/Data_Mac/TestFL/trg/test.xml'
 log_file = '/Volumes/Data_Mac/TestFL/log.txt'
 recreate_dir(trg_directory)
 header = """
-import 'package:rg2_flutter_getx/models/abstracts/phases.dart';
+import 'package:rg2_flutter_getx/models/phases.dart';
 
 class ClassName implements Phase {
   @override
