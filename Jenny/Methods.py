@@ -1,6 +1,7 @@
 def print_some_var(value):
-    digit = 5
+    digit = 3
     print(value)
+    print(digit)
 
 
 def show_index(x, z):
@@ -15,10 +16,10 @@ def show_res(digit):
     print(q)
 
 
-letter = input("Введите букву")
+letter = "a"
 string = letter + " - это буква"
-digit = int(input("Введите цифру"))
-number = digit * 987
+digit = 5
+number = digit * 9
 
 print_some_var(letter)
 
