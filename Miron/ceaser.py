@@ -7,4 +7,5 @@ def coding(string, shift):
 
 st = input("Введите слово:")
 sdvig = int(input("Введите сдвиг:"))
-print(coding(st, sdvig))
+new_st = coding(st, sdvig)
+print(new_st)
